@@ -32,35 +32,9 @@ $ docker build -t factoring_grader.v1.1 .
 Output :
 Sending build context to Docker daemon 832.4 MB
 Sending build context to Docker daemon
-Step 0 : FROM java:8
- ---> 1f80eb0f8128
-Step 1 : RUN mkdir /grader
- ---> Using cache
- ---> 1b487dd8084e
-Step 2 : COPY executeGrader.sh /grader/executeGrader.sh
- ---> 2e207b13bd0b
-Removing intermediate container 7b5066f7b03a
-Step 3 : COPY testCases.txt /grader/testCases.txt
- ---> f0a93ccffd5d
-Removing intermediate container a3f6fbe430a6
-Step 4 : COPY solution.txt /grader/solution.txt
- ---> d8a10c61d9aa
-Removing intermediate container ce799560d152
-Step 5 : COPY Grader.java /grader/Grader.java
- ---> 4e29ea919594
-Removing intermediate container ab3f8a4ba86f
-Step 6 : RUN chmod a+rwx -R /grader/
- ---> Running in d6a21a95a46f
- ---> 52d56a0c42e2
-Removing intermediate container d6a21a95a46f
-Step 7 : WORKDIR /grader
- ---> Running in 3ca40c2a950c
- ---> ba46f7dfb59e
-Removing intermediate container 3ca40c2a950c
-Step 8 : ENTRYPOINT ./executeGrader.sh
- ---> Running in 9408d297d3be
- ---> 15c3a282b939
-Removing intermediate container 9408d297d3be
+Step 0 : FROM ubuntu:latest
+.....
+.....
 Successfully built 15c3a282b939
 
 
