@@ -1,2 +1,2 @@
 # programming-assignments-coursera
-Code to create a simple programming assignment on Coursera.
+This repository contains sample graders used with Coursera's programming assignments platform and supporting instructions.

@@ -1,0 +1,11 @@
+We currently support two types of built-in graders:
+
+(1) Numeric Interval Graders
+
+Example in NumericGrader directory.
+Its a simple grader that expects a list of numbers from the learner, and grades/provides feedback by matching each number to a given set of intervals.
+
+(2) Regular Expression Graders
+
+Example in RegexGrader directory.
+This grader expects a string from the learner as a submission, and grades/provides feedback based on which regular expression did the learner's submission match.
