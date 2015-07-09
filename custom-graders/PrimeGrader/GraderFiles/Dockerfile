@@ -1,6 +1,18 @@
-# Fetch ubuntu docker image supporting java.
-# TODO: Use 'FROM ubuntu:latest' and install java on top.
-FROM java:8
+# Fetch latest ubuntu docker image
+FROM ubuntu:latest
+
+# Install Java on your ubuntu image.
+RUN \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  yes | apt-get install software-properties-common &&\
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java8-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Make a directory where your files will be stored
 RUN mkdir /grader
